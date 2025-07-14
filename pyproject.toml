@@ -1,0 +1,28 @@
+[project]
+name = "llm-tools-weather-forecast"
+version = "0.1"
+description = "Tool to get a current weather forecast for a given city"
+readme = "README.md"
+authors = [{name = "Thomas Dürr"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm>=0.26"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/thomd/llm-tools-weather-forecast"
+Changelog = "https://github.com/thomd/llm-tools-weather-forecast/releases"
+Issues = "https://github.com/thomd/llm-tools-weather-forecast/issues"
+CI = "https://github.com/thomd/llm-tools-weather-forecast/actions"
+
+[project.entry-points.llm]
+llm_tools_weather_forecast = "llm_tools_weather_forecast"
+
+[project.optional-dependencies]
+test = ["pytest", "llm-echo>=0.3a1"]
