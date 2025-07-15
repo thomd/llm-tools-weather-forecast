@@ -1,8 +1,8 @@
 # llm-tools-weather-forecast
 
-Tool for the [llm CLI](https://github.com/simonw/llm) to get a current weather forecast for a given city.
+Tool for the [llm](https://github.com/simonw/llm) CLI to get a current weather forecast for a given city.
 
-> [!IMPORTANT]
+> [!CAUTION]
 > This tool was created for educational purposes only. It is not meant for production or the like.
 
 ## Installation
@@ -16,7 +16,7 @@ llm tools
 
 ## Usage
 
-The tool requires an API Key from [OpenWeather](https://openweathermap.org/api).
+The tool requires an API Key from [OpenWeatherMap](https://openweathermap.org/api).
 
 ```bash
 export OPENWEATHERMAP_API_KEY="..."
