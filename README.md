@@ -25,7 +25,8 @@ llm --tool weather_forecast "What will the weather be like in Hamburg?" --tools-
 
 ## Analysis LLM Tool Calling
 
-To understand how tools are processed by LLM models, use e.g. a local [Ollama](https://ollama.com/) model.
+To understand how tools are processed by LLM models, use a local [Ollama](https://ollama.com/) model and 
+start [mitmproxy](https://mitmproxy.org/) as a reverse proxy for inspection of the request and response.
 
 ```bash
 # start revers proxy
