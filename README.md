@@ -2,8 +2,8 @@
 
 Tool for the [llm CLI](https://github.com/simonw/llm) to get a current weather forecast for a given city.
 
-[!IMPORTANT]
-This tool was created for educational purposes only. It is not meant for production or the like.
+> [!CAUTION]
+> This tool was created for educational purposes only. It is not meant for production or the like.
 
 ## Installation
 
@@ -19,6 +19,7 @@ llm tools
 The tool requires an API Key from [OpenWeather](https://openweathermap.org/api).
 
 ```bash
-llm --tool weather_forecast "What will the weather be like in Hamburg over the next three days?" --tools-debug
+export OPENWEATHERMAP_API_KEY="..."
+llm --tool weather_forecast "What will the weather be like in Hamburg?" --tools-debug
 ```
 
