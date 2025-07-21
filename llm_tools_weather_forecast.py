@@ -5,7 +5,10 @@ import json
 
 def weather_forecast(city_name: str) -> str:
     """
-    This tool privides data for predicting the weather for the current and future 5 days based on the name of a city.
+    This tool privides JSON data for predicting the weather for the current and future 5 days for a given location.
+
+    Args:
+        city_name (str): The name of the city to get the weather forecast for.
     """
     try:
         api_key = os.getenv("OPENWEATHERMAP_API_KEY")
