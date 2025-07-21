@@ -2,14 +2,13 @@ import llm
 import json
 from llm_tools_weather_forecast import weather_forecast
 
-
 def test_tool():
     model = llm.get_model("echo")
     chain_response = model.chain(
         json.dumps(
             {
                 "tool_calls": [
-                    {"name": "weather_forecast", "arguments": {"input": "pelican"}}
+                    {"name": "weather_forecast", "arguments": {"input": "Hamburg"}}
                 ]
             }
         ),
