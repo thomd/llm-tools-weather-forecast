@@ -5,7 +5,8 @@ import json
 
 def weather_forecast(city_name: str) -> str:
     """
-    This tool privides JSON data for predicting the weather for the current and future 5 days for a given location.
+    This tool provides JSON data for predicting the weather for the current day and the next five days for a given location.
+    The temperature is provided in degree Fahrenheit.
 
     Args:
         city_name (str): The name of the city to get the weather forecast for.
