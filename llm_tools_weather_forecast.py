@@ -5,13 +5,16 @@ import json
 
 def weather_forecast(city_name: str) -> str:
     """
-    This function predicts the weather for the current and future days based on the name of a city.
+    This tool predicts the weather for the current and future days based on the name of a city.
     """
     try:
         api_key = os.getenv("OPENWEATHERMAP_API_KEY")
-        url = "http://api.openweathermap.org/data/2.5/weather?appid=" + api_key + "&q=" + city_name
+        geocode_url =  f'https://api.openweathermap.org/geo/1.0/direct?q={city_name}&limit=1&appid={api_key}'
         data = requests.get(url).json()
-        return f'{data["name"]}, {round(int(data["main"]["temp"])-273.15, 1)}°C, {data["weather"][0]["description"]}'
+        lat, lon = data['lat'], data['lon']
+        forecast_url = f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_key}'
+        data = requests.get(url).json()
+        return data
     except Exception as e:
         return f"Error: {str(e)}"
 
