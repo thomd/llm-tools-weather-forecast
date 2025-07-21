@@ -1,5 +1,7 @@
 # llm-tools-weather-forecast
 
+[![Tests](https://github.com/thomd/llm-tools-weather-forecast/actions/workflows/test.yml/badge.svg)](https://github.com/thomd/llm-tools-weather-forecast/actions/workflows/test.yml)
+
 Tool for the [llm](https://github.com/simonw/llm) CLI to get a current weather forecast for a given city.
 
 > [!CAUTION]
