@@ -1,10 +1,12 @@
 import llm
 import json
+import os
 import pytest
 from unittest.mock import patch, Mock
 from llm_tools_weather_forecast import weather_forecast
 
 @patch('llm_tools_weather_forecast.requests.get')
+@patch.dict(os.environ, {"OPENWEATHERMAP_API_KEY": "123"}, clear=True)
 def test_tool(mock_get):
 
     def mock_requests(url):
