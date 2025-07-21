@@ -14,4 +14,4 @@ build-backend = "setuptools.build_meta"
 llm_tools_weather_forecast = "llm_tools_weather_forecast"
 
 [project.optional-dependencies]
-test = ["pytest", "llm-echo"]
+test = ["pytest", "llm-echo>=0.3a1"]
