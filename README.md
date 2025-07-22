@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/thomd/llm-tools-weather-forecast/actions/workflows/test.yml/badge.svg)](https://github.com/thomd/llm-tools-weather-forecast/actions/workflows/test.yml)
 
-Tool for the [llm](https://github.com/simonw/llm) CLI to get a current weather forecast for a given city.
+Very simple tool for the [llm](https://github.com/simonw/llm) CLI to get a current weather forecast for a given city.
 
 > [!CAUTION]
 > This tool was created for educational purposes only. It is not meant for production or the like.
@@ -23,12 +23,13 @@ The tool requires an API Key from [OpenWeatherMap](https://openweathermap.org/ap
 ```bash
 export OPENWEATHERMAP_API_KEY="..."
 llm --tool weather_forecast "What will the weather be like in Hamburg?" --tools-debug
+llm --tool weather_forecast -s "Act as a meteorologist" "What will the weather be like in Hamburg tomorrow?"
 ```
 
 ## Analysis LLM Tool Calling
 
-To understand how tools are processed by LLM models, use a local [Ollama](https://ollama.com/) model and 
-start [mitmproxy](https://mitmproxy.org/) as a reverse proxy for inspection of the request and response.
+To understand how python code of tools is translated to the API structure of requests, use a local [Ollama](https://ollama.com/) 
+model and start [mitmproxy](https://mitmproxy.org/) as a reverse proxy for inspection of the request and response.
 
 ```bash
 # start revers proxy
