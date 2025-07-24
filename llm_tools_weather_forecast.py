@@ -1,7 +1,6 @@
 import llm
 import os
 import requests
-import json
 
 def weather_forecast(city_name: str) -> str:
     """
@@ -13,7 +12,7 @@ def weather_forecast(city_name: str) -> str:
     """
     try:
         api_key = os.getenv("OPENWEATHERMAP_API_KEY")
-        if api_key == None:
+        if api_key is None:
             raise Exception('API key for OpenWeatherMap missing')
         geocode_url =  f'https://api.openweathermap.org/geo/1.0/direct?q={city_name}&limit=1&appid={api_key}'
         geocode_data = requests.get(geocode_url).json()

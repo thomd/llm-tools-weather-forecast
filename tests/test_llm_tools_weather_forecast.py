@@ -1,7 +1,6 @@
 import llm
 import json
 import os
-import pytest
 from unittest.mock import patch, Mock
 from llm_tools_weather_forecast import weather_forecast
 
