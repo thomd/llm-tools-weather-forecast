@@ -4,7 +4,7 @@
 
 Very simple tool for the [llm](https://github.com/simonw/llm) CLI to get a current weather forecast for a given city.
 
-> [!CAUTION]
+> [!NOTE]
 > This tool was created for educational purposes only. It is not meant for production or the like.
 
 ## Installation
